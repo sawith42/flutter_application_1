@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'Example.dart';
+import 'Form_Screen.dart';
+import 'ex.dart';
+import 'list_view_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
 
@@ -32,6 +37,35 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.amberAccent,
                 child: Image.asset('assets/images/Catcover_web.jpg')
                 ),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=> ListViewScreen(),
+                  ),
+                  );
+                }, 
+                child: Text("กดปุ่มนี้ดู")
+                ),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=> FormScreen(),
+                  ),
+                  );
+                }, 
+                child: Text("FormScreen")
+                ),
+                 ElevatedButton(onPressed: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=> Example(),
+                  ),
+                  );
+                }, 
+                child: Text("Example")
+                ),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=> ex(),
+                  ),
+                  );
+                }, 
+                child: Text("ex")
+                ),
+                
             ],
           ),
         ),
